@@ -11,7 +11,9 @@ function NavComp() {
     <>
     
     <div style={{display:"flex",justifyContent:"space-evenly", color:"white"}}>
-        
+    <div>
+        <Link to = "/createpost" ><h3>Create Post</h3></Link>
+        </div>
         <div>
         <Link to = "/myposts" ><h3>My Posts</h3></Link>
         </div>

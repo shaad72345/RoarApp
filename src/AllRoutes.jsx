@@ -9,6 +9,8 @@ import NavComp from "./components/NavComp";
 import SignOutComp from "./SignOutComp";
 import { useContext } from "react";
 import { myContext } from "./CustomProviderComp";
+import PrivateMypost from "./components/privateMypost";
+import CreatePost from "./components/CreatePost";
 function AllRoutes() {
    const {isLogin} = useContext(myContext);
   return (
@@ -22,8 +24,10 @@ function AllRoutes() {
       <Route path="/signout" element={<SignOutComp/>}/>
       <Route path="/login" element={<LoginComp/>}/>
       <Route path="/signup" element={<SignupComp/>}/>
-      <Route path="/myposts" element={<MyPostsComp/>}/>
-      <Route path="/allposts" element={<AllpostsComp/>}/>
+
+      <Route path="/myposts" element={<PrivateMypost><MyPostsComp/></PrivateMypost> }/>
+      <Route path="/allposts" element={<PrivateMypost> <AllpostsComp/> </PrivateMypost> }/>
+      <Route path="/createpost" element={<PrivateMypost> <CreatePost/> </PrivateMypost> }/>
 
     </Routes>
    
