@@ -4,11 +4,13 @@ import { myContext } from './CustomProviderComp'
 import { useNavigate } from 'react-router-dom';
 
 function SignOutComp() {
-      const {logout}  = useContext(myContext);
+      const {logout, setName}  = useContext(myContext);
       const navigate = useNavigate();
 
     const handleSignout = ()=>{
      logout();
+     localStorage.removeItem("Name");
+     setName("");
      navigate("/login")
     }
    const backtoallposts =()=>{

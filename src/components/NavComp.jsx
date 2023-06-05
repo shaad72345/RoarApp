@@ -3,33 +3,36 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { myContext } from '../CustomProviderComp'
+import './nav.css';
 function NavComp() {
 
-      const {isLogin} = useContext(myContext);
-      console.log(isLogin);
-  return (
-    <>
+      const {isLogin, Name} = useContext(myContext);
     
-    <div style={{display:"flex",justifyContent:"space-evenly", color:"white"}}>
+  return (
+   <div id='navContainer'>
+    
+    <div style={{display:"flex",justifyContent:"space-evenly"}}>
     <div>
-        <Link to = "/createpost" ><h3>Create Post</h3></Link>
+        <Link to = "/createpost" style={{textDecoration:"none"}}><h3 style={{color:"tomato"}}>Create Post</h3></Link>
         </div>
         <div>
-        <Link to = "/myposts" ><h3>My Posts</h3></Link>
+        <Link to = "/myposts" style={{textDecoration:"none"}} ><h3 style={{color:"tomato"}}>My Posts</h3></Link>
         </div>
         <div>
-        <Link to = "/allposts" ><h3>All Posts</h3></Link>
+        <Link to = "/allposts" style={{textDecoration:"none"}} ><h3 style={{color:"tomato"}}>All Posts</h3></Link>
         </div>
         {/* <div><Link to = "/signup" ><h3>SignUp</h3></Link></div> */}
-      {  !isLogin ? <div><Link to = "/login" ><h3>Login</h3></Link></div> : null}
+      {  !isLogin ? <div><Link to = "/login" style={{textDecoration:"none"}} ><h3 style={{color:"tomato"}}>Login</h3></Link></div> : null}
         <div>
         {/* <Link to = "/signout" ><h3>SignOut</h3></Link> */}
-        {  isLogin ? <div><Link to = "/signout" ><h3>SignOut</h3></Link></div> : null}
+        {  isLogin ? <div><Link to = "/signout" style={{textDecoration:"none"}} ><h3 style={{color:"tomato"}}>SignOut</h3></Link></div> : null}
         </div>
+       {Name ? <div> <h3 style={{color:"green"}}> {Name}</h3> </div>:null}
+       
       </div>
+      <hr style={{borderColor:"tomato"}}/>
     
-    
-    </>
+      </div>
   )
 }
 

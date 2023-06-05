@@ -7,19 +7,21 @@ export const myContext = createContext();
 
 
 function CustomProviderComp({children}) {
- const[isWelcome, setWelcome]    = useState(false);
-   const [isLogin, setLogin] = useState(false);
-   const login = ()=>{
-    setLogin(true);
-   }
+ const[isWelcome, setWelcome]  = useState(false);
+   const [isLogin, setLogin] = useState("");
+   const [Name, setName] = useState("");
+
+  //  const login = ()=>{
+  //   setLogin(true);
+  //  }
    const logout= ()=>{
-    setLogin(false);
+    setLogin("");
    }
    const handleWelcome = ()=>{
     setWelcome(true);
-   }
+   }                                    //////////, login
   return (
-   <myContext.Provider value = {{isLogin, login, logout,handleWelcome, isWelcome}}>
+   <myContext.Provider value = {{isLogin,setLogin, logout,handleWelcome, isWelcome , setName, Name}}>
     {children}
    </myContext.Provider>
   )
