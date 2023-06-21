@@ -15,7 +15,7 @@ function DeleteComp() {
        }
 
        const handleDelete = async()=>{
-         await fetch(`http://localhost:8080/posts/delete/${id}`, {
+         await fetch(`https://giddy-overcoat-jay.cyclic.app/posts/delete/${id}`, {
             method : "DELETE",
             headers : {
                 'Authorization' : `Bearer ${isLogin}`

@@ -16,7 +16,7 @@ function SignupComp() {
 
             if(name && username &&password){
  setflag(false);
-        fetch("http://localhost:8080/user/signup", {
+        fetch("https://giddy-overcoat-jay.cyclic.app/user/signup", {
           method : "POST",
           headers : {'Content-Type':'application/json' },
           body : JSON.stringify(payload)

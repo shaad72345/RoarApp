@@ -16,7 +16,7 @@ function LoginComp() {
       const payload = {username, password}
 
      if(username &&password){
- fetch("http://localhost:8080/user/login", {
+ fetch("https://giddy-overcoat-jay.cyclic.app/user/login", {
    method : "POST",
    headers : {'Content-Type':'application/json' },
    body : JSON.stringify(payload)

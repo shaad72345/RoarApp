@@ -9,9 +9,9 @@ function CreatePost() {
   const [Post_Image, setImage] = useState("")
  const handleUpload = ()=>{
   const {Title, description} = post;
-  console.log(Post_Image);
+ // console.log(Post_Image);
 const payload = {Title,Post_Image, description}
-  fetch("http://localhost:8080/posts/create", {
+  fetch("https://giddy-overcoat-jay.cyclic.app/posts/create", {
     method:"POST",
     headers : {
       'Content-Type':'application/json',
@@ -19,16 +19,16 @@ const payload = {Title,Post_Image, description}
    },
     body : JSON.stringify(payload)
   }).then((res)=>res.json())
-  .then((res)=>{console.log(res); setUploadMsg(res.msg); titlebox ="" })
+  .then((res)=>{setUploadMsg(res.msg); titlebox ="" })
   .catch((err)=>console.log(err))
 
  }
  const convertToBase64 = (e)=>{
-console.log(e);
+//console.log(e);
 var reader = new FileReader();
 reader.readAsDataURL(e.target.files[0]);
 reader.onload =() =>{
-  console.log(reader.result)
+ // console.log(reader.result)
   setImage(reader.result);
   console.log(Post_Image);
   

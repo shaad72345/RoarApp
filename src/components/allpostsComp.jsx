@@ -9,16 +9,16 @@ function AllpostsComp() {
   const [allpost, setAllpost] = useState([]);
   const {isLogin} = useContext(myContext);
   
-  console.log(isLogin);
+ // console.log(isLogin);
  const  getposts = ()=>{
 
-  fetch("http://localhost:8080/posts", {
+  fetch("https://giddy-overcoat-jay.cyclic.app/posts", {
     method : "GET",
     headers : {
       'Authorization' : `Bearer ${isLogin}`
     }
   }).then((res)=>res.json())
-  .then((res)=>{console.log(res); setAllpost(res)})
+  .then((res)=>{setAllpost(res)})
   .catch((err)=>{console.log(err)})
  }
 
