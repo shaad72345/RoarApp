@@ -12,7 +12,7 @@ function AllpostsComp() {
  // console.log(isLogin);
  const  getposts = ()=>{
 
-  fetch("https://giddy-overcoat-jay.cyclic.app/posts", {
+  fetch("https://todoapp-5u2n.onrender.com/posts", {
     method : "GET",
     headers : {
       'Authorization' : `Bearer ${isLogin}`

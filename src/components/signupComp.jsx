@@ -16,7 +16,9 @@ function SignupComp() {
 
             if(name && username &&password){
  setflag(false);
-        fetch("https://giddy-overcoat-jay.cyclic.app/user/signup", {
+//  https://giddy-overcoat-jay.cyclic.app
+
+        fetch(" https://todoapp-5u2n.onrender.com/user/signup", {
           method : "POST",
           headers : {'Content-Type':'application/json' },
           body : JSON.stringify(payload)

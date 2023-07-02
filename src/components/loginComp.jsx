@@ -16,7 +16,7 @@ function LoginComp() {
       const payload = {username, password}
 
      if(username &&password){
- fetch("https://giddy-overcoat-jay.cyclic.app/user/login", {
+ fetch("https://todoapp-5u2n.onrender.com/user/login", {
    method : "POST",
    headers : {'Content-Type':'application/json' },
    body : JSON.stringify(payload)

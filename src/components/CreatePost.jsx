@@ -11,7 +11,7 @@ function CreatePost() {
   const {Title, description} = post;
  // console.log(Post_Image);
 const payload = {Title,Post_Image, description}
-  fetch("https://giddy-overcoat-jay.cyclic.app/posts/create", {
+  fetch("https://todoapp-5u2n.onrender.com/posts/create", {
     method:"POST",
     headers : {
       'Content-Type':'application/json',

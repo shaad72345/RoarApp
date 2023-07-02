@@ -12,7 +12,7 @@ function MyPostsComp() {
   
  const  getposts = ()=>{
 
-  fetch("https://giddy-overcoat-jay.cyclic.app/posts/my", {
+  fetch("https://todoapp-5u2n.onrender.com/posts/my", {
     method : "GET",
     headers : {
       'Authorization' : `Bearer ${isLogin}`
