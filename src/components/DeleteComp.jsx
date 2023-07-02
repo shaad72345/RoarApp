@@ -15,7 +15,7 @@ function DeleteComp() {
        }
 
        const handleDelete = async()=>{
-         await fetch(`https://todoapp-5u2n.onrender.com/posts/delete/${id}`, {
+         await fetch(`https://roar-app-backend.onrender.com/posts/delete/${id}`, {
             method : "DELETE",
             headers : {
                 'Authorization' : `Bearer ${isLogin}`
